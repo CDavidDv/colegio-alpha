@@ -1,0 +1,61 @@
+---
+// Componente Navbar institucional para Colegio Alpha
+---
+<nav class="w-full fixed top-0 left-0 z-50 shadow-md bg-[var(--color-logo-azul)]" >
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-2 pl-10">
+      <img src="/Recurso 1@4x.webp" alt="Logo Colegio Alpha" class="h-12 w-full bg-white px-2 py-1 rounded-lg" />
+    </div>
+    
+    <!-- Menú desktop -->
+    <ul class="hidden md:flex gap-6 text-lg font-medium">
+      <li><a href="#inicio" class="text-white hover:text-[var(--color-logo-verde)] transition">Inicio</a></li>
+      <li><a href="#filosofia" class="text-white hover:text-[var(--color-logo-verde)] transition">Filosofía</a></li>
+      <li><a href="#steam" class="text-white hover:text-[var(--color-logo-verde)] transition">STEAM</a></li>
+      <li><a href="#contacto" class="text-white hover:text-[var(--color-logo-verde)] transition">Contacto</a></li>
+    </ul>
+    
+    <a href="#inscripcion" class="md:block hidden bg-[var(--color-logo-verde)] text-white px-5 py-2 rounded-lg font-semibold shadow hover:bg-[#5aa023] transition">¡Inscríbete!</a>
+    
+    <!-- Botón menú móvil -->
+    <button id="mobile-menu-button" class="md:hidden text-[var(--color-logo-azul)] hover:text-[var(--color-logo-verde)] transition">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+  
+  <!-- Menú móvil -->
+  <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+    <div class="px-4 py-2 space-y-2">
+      <a href="#inicio" class="block py-2 text-[var(--color-logo-azul)] hover:text-[var(--color-logo-verde)] transition">Inicio</a>
+      <a href="#filosofia" class="block py-2 text-[var(--color-logo-azul)] hover:text-[var(--color-logo-verde)] transition">Filosofía</a>
+      <a href="#steam" class="block py-2 text-[var(--color-logo-azul)] hover:text-[var(--color-logo-verde)] transition">STEAM</a>
+      <a href="#oferta" class="block py-2 text-[var(--color-logo-azul)] hover:text-[var(--color-logo-verde)] transition">Oferta</a>
+      <a href="#colaboradores" class="block py-2 text-[var(--color-logo-azul)] hover:text-[var(--color-logo-verde)] transition">Colaboradores</a>
+      <a href="#redes-sociales" class="block py-2 text-[var(--color-logo-azul)] hover:text-[var(--color-logo-verde)] transition">Redes</a>
+      <a href="#contacto" class="block py-2 text-[var(--color-logo-azul)] hover:text-[var(--color-logo-verde)] transition">Contacto</a>
+      <a href="#inscripcion" class="block py-2 bg-[var(--color-logo-verde)] text-white rounded-lg font-semibold text-center">¡Inscríbete!</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Toggle menú móvil
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Cerrar menú al hacer click en un enlace
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  }
+</script> 

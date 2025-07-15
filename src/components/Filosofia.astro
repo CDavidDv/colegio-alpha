@@ -1,0 +1,138 @@
+---
+import CardFilosofia from "./CardFilosofia.astro";
+// Componente Filosofía institucional para Colegio Alpha
+---
+<section id="filosofia" class="py-16">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-logo-azul)] mb-6">¿Por qué elegirnos?</h2>
+    <p class="text-lg text-gray-700 mb-8">En Colegio Alpha entendemos que la educación de tus hijos es la inversión más importante. Por eso, nos comprometemos a ofrecer un ambiente seguro, cálido y estimulante donde cada niño pueda desarrollar su potencial único.</p>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+      <CardFilosofia
+        img="/alpha- (6).webp"
+        emoji="🛡️"
+        titulo="Seguridad Garantizada"
+        texto="Instalaciones seguras, personal capacitado y protocolos de seguridad que te dan tranquilidad."
+        colorBorde="#F97316"
+        colorTitulo="#F97316"
+        svgPath="M0 20 Q200 80 400 20 V60 H0Z"
+        alt="Seguridad"
+      />
+      <CardFilosofia
+        img="/atencion.webp"
+        emoji="👨‍👩‍👧‍👦"
+        titulo="Atención Personalizada"
+        texto="Grupos reducidos y seguimiento individual del progreso de cada estudiante."
+        colorBorde="#67BC29"
+        colorTitulo="#67BC29"
+        svgPath="M0 30 Q200 90 400 30 V60 H0Z"
+        alt="Atención"
+      />
+      <CardFilosofia
+        img="/6.webp"
+        emoji="🌟"
+        titulo="Valores"
+        texto="Fomentamos el respeto, la honestidad y la responsabilidad en cada estudiante."
+        colorBorde="#3B82F6"
+        colorTitulo="#1E40AF"
+        svgPath="M0 40 Q200 70 400 40 V60 H0Z"
+        alt="Valores"
+      />
+      <CardFilosofia
+        img="/deportes.webp"
+        emoji="⚽"
+        titulo="Deportes"
+        texto="Fomentan el trabajo en equipo, la disciplina y el desarrollo físico saludable en los niños."
+        colorBorde="#67BC29"
+        colorTitulo="#67BC29"
+        svgPath="M0 30 Q200 90 400 30 V60 H0Z"
+        alt="Deportes"
+      />
+      <CardFilosofia
+        img="/alpha- (9).webp"
+        emoji="🏕️"
+        titulo="Campamentos"
+        texto="Desarrollan autonomía, liderazgo y habilidades sociales en un entorno divertido y seguro."
+        colorBorde="#3B82F6"
+        colorTitulo="#3B82F6"
+        svgPath="M0 40 Q200 70 400 40 V60 H0Z"
+        alt="Campamentos"
+      />
+      <CardFilosofia
+        img="/alpha- (10).webp"
+        emoji="🎉"
+        titulo="Eventos"
+        texto="Promueven la convivencia, la creatividad y la expresión de talentos en la comunidad escolar."
+        colorBorde="#F97316"
+        colorTitulo="#F97316"
+        svgPath="M0 25 Q200 100 400 25 V60 H0Z"
+        alt="Eventos"
+      />
+      <CardFilosofia
+        img="/eeuu_flag.webp"
+        emoji="🇬🇧"
+        titulo="Inglés"
+        texto="Facilita la comunicación global y abre puertas a nuevas oportunidades académicas y culturales."
+        colorBorde="#1E40AF"
+        colorTitulo="#1E40AF"
+        svgPath="M0 40 Q200 70 400 40 V60 H0Z"
+        alt="Inglés"
+      />
+      <CardFilosofia
+        img="/francia_flag.jpg"
+        emoji="🇫🇷"
+        titulo="Francés"
+        texto="Enriquece el aprendizaje de idiomas y la apreciación de otras culturas desde pequeños."
+        colorBorde="#01A8B7"
+        colorTitulo="#01A8B7"
+        svgPath="M0 25 Q200 100 400 25 V60 H0Z"
+        alt="Francés"
+      />
+      <CardFilosofia
+        img="/artes.webp"
+        emoji="🎨"
+        titulo="Artes"
+        texto="Desarrollan la creatividad, la sensibilidad y la expresión artística en los niños."
+        colorBorde="#EAB308"
+        colorTitulo="#EAB308"
+        svgPath="M0 40 Q200 70 400 40 V60 H0Z"
+        alt="Artes"
+      />
+    </div>
+
+
+    
+  </div>
+</section> 
+
+<script>
+// Efecto de seguimiento al mouse en las cards
+if (typeof window !== 'undefined') {
+  setTimeout(() => {
+    const cards = document.querySelectorAll('.filo-card-move');
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const event = e as MouseEvent;
+        const el = card as HTMLElement;
+        const rect = el.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const moveX = ((x / rect.width) - 0.5) * 16; // máx ±8px
+        const moveY = ((y / rect.height) - 0.5) * 16;
+        el.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.03)`;
+        el.style.transition = 'transform 0.15s';
+      });
+      card.addEventListener('mouseleave', () => {
+        const el = card as HTMLElement;
+        el.style.transform = 'translate(0,0) scale(1)';
+        el.style.transition = 'transform 0.35s cubic-bezier(.22,1,.36,1)';
+      });
+    });
+  }, 300);
+}
+</script>
+
+<style>
+.filo-card-move {
+  will-change: transform;
+}
+</style> 

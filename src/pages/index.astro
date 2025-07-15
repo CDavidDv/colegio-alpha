@@ -1,11 +1,52 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Filosofia from "../components/Filosofia.astro";
+import OfertaEducativa from "../components/OfertaEducativa.astro";
+import Steam from "../components/Steam.astro";
+import Colaboradores from "../components/Colaboradores.astro";
+import Carousel from "../components/Carousel.astro";
+import RedesSociales from "../components/RedesSociales.astro";
+import Inscripcion from "../components/Inscripcion.astro";
+import Contacto from "../components/Contacto.astro";
+import Mapa from "../components/Mapa.astro";
+import Footer from "../components/Footer.astro";
+import BotonFlotante from "../components/BotonFlotante.astro";
+import MisionVision from "../components/MisionVision.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <Navbar />
+  <Hero />
+  <Filosofia />
+  <MisionVision />
+  <OfertaEducativa />
+  <Steam />
+  <Colaboradores />
+  <Carousel />
+  <RedesSociales />
+  <Inscripcion />
+  <div class="flex flex-col md:flex-row gap-10 justify-center items-start">
+    <Contacto />
+    <Mapa />
+  </div>
+  <Footer />
+  <BotonFlotante />
 </Layout>
+
+<style>
+  @keyframes fade-in-up {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 1s cubic-bezier(0.4,0,0.2,1) both;
+  }
+  .animate-fade-in {
+    animation: fade-in-up 1.2s cubic-bezier(0.4,0,0.2,1) both;
+  }
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+</style>

@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+/* Variables de color del logo */
+:root {
+  --color-logo-verde: #67BC29;
+  --color-logo-azul: #002444;
+  
+  /* Colores STEAM */
+  --color-steam-verde: #97BE12;
+  --color-steam-azul-oscuro: #002444;
+  --color-steam-amarillo: #E4E41A;
+  --color-steam-naranja: #FF7300;
+  --color-steam-azul-claro: #01A8B7;
+}
+
+/* Figuras geométricas animadas de fondo */
+.geometric-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.geometric-shape {
+  position: absolute;
+  opacity: 0.1;
+  filter: blur(1px);
+}
+
+/* Círculo rotando */
+.circle-1 {
+  width: 200px;
+  height: 200px;
+  background: var(--color-steam-verde);
+  border-radius: 50%;
+  top: 10%;
+  left: 5%;
+  animation: rotate 20s linear infinite, float 8s ease-in-out infinite;
+}
+
+.circle-2 {
+  width: 150px;
+  height: 150px;
+  background: var(--color-steam-azul-claro);
+  border-radius: 50%;
+  top: 60%;
+  right: 10%;
+  animation: rotate 15s linear infinite reverse, float 6s ease-in-out infinite reverse;
+}
+
+/* Triángulo con efecto 3D */
+.triangle-1 {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 173px solid var(--color-steam-naranja);
+  top: 20%;
+  right: 20%;
+  animation: rotate 25s linear infinite, pulse 4s ease-in-out infinite;
+  filter: drop-shadow(0 10px 20px rgba(255, 115, 0, 0.3));
+}
+
+.triangle-2 {
+  width: 0;
+  height: 0;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 138px solid var(--color-steam-amarillo);
+  bottom: 20%;
+  left: 15%;
+  animation: rotate 18s linear infinite reverse, pulse 5s ease-in-out infinite;
+  filter: drop-shadow(0 8px 16px rgba(228, 228, 26, 0.3));
+}
+
+/* Cuadrado con sombra 3D */
+.square-1 {
+  width: 120px;
+  height: 120px;
+  background: var(--color-logo-verde);
+  top: 40%;
+  left: 60%;
+  animation: rotate 30s linear infinite, float 7s ease-in-out infinite;
+  filter: drop-shadow(0 12px 24px rgba(103, 188, 41, 0.4));
+  transform: rotate(45deg);
+}
+
+.square-2 {
+  width: 80px;
+  height: 80px;
+  background: var(--color-steam-azul-oscuro);
+  bottom: 30%;
+  right: 25%;
+  animation: rotate 22s linear infinite reverse, float 9s ease-in-out infinite;
+  filter: drop-shadow(0 6px 12px rgba(0, 36, 68, 0.4));
+  transform: rotate(30deg);
+}
+
+/* Hexágono */
+.hexagon-1 {
+  width: 100px;
+  height: 57.74px;
+  background: var(--color-steam-azul-claro);
+  position: relative;
+  top: 15%;
+  left: 80%;
+  animation: rotate 28s linear infinite, pulse 6s ease-in-out infinite;
+  filter: drop-shadow(0 10px 20px rgba(1, 168, 183, 0.3));
+}
+
+.hexagon-1::before,
+.hexagon-1::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.hexagon-1::before {
+  bottom: 100%;
+  border-bottom: 28.87px solid var(--color-steam-azul-claro);
+}
+
+.hexagon-1::after {
+  top: 100%;
+  border-top: 28.87px solid var(--color-steam-azul-claro);
+}
+
+/* Animaciones */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(1.1);
+  }
+}
+
+/* Animación intermitente */
+.blink {
+  animation: blink 3s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Aplicar animación intermitente a algunas figuras */
+.circle-1,
+.triangle-1,
+.square-1 {
+  animation: rotate 20s linear infinite, float 8s ease-in-out infinite, blink 4s ease-in-out infinite;
+}
+
+.circle-2,
+.triangle-2,
+.square-2,
+.hexagon-1 {
+  animation: rotate 15s linear infinite reverse, float 6s ease-in-out infinite reverse, blink 5s ease-in-out infinite;
+}
+
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+}
