@@ -3,10 +3,10 @@ import CardFilosofia from "./CardFilosofia.astro";
 // Componente Filosofía institucional para Colegio Alpha
 ---
 <section id="filosofia" class="py-16">
-  <div class="max-w-6xl mx-auto px-4 text-center">
+  <div class="max-w-7xl mx-auto px-4 text-center">
     <h2 class="text-3xl md:text-4xl font-bold text-[var(--steam-azul-oscuro)] mb-6">¿Por qué elegirnos?</h2>
     <p class="text-lg text-gray-700 mb-8">En Colegio Alpha entendemos que la educación de tus hijos es la inversión más importante. Por eso, nos comprometemos a ofrecer un ambiente seguro, cálido y estimulante donde cada niño pueda desarrollar su potencial único.</p>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 mb-8">
       
       <CardFilosofia
         img="/deportes.webp"
@@ -48,6 +48,16 @@ import CardFilosofia from "./CardFilosofia.astro";
         svgPath="M0 40 Q200 70 400 40 V60 H0Z"
         alt="Artes y Cultura"
       />
+      <CardFilosofia
+      img="/atencion.webp"
+      emoji="🔗"
+      titulo="STEAM"
+      texto="El método STEAM desarrolla las habilidades de los estudiantes en diferentes áreas descubriendo así gustos por actividades antes no practicadas."
+      colorBorde="#67BC29"
+      colorTitulo="#67BC29"
+      svgPath="M0 40 Q200 70 400 40 V60 H0Z"
+      alt="STEAM"
+    />
     </div>
   </div>
 </section>
