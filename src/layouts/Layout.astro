@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+
+
 ---
 
 <!doctype html>
@@ -11,6 +13,9 @@ import "../styles/global.css";
 		<meta name="generator" content={Astro.generator} />
 		<title>Colegio Alpha - Educación de Excelencia en Pachuca</title>
 		<meta name="description" content="Colegio Alpha de Pachuca - Educación integral con metodología STEAM, inglés intensivo y formación en valores para kinder, primaria y secundaria." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 	</head>
 	<body class="relative overflow-x-hidden overflow-y-auto">
 		<!-- Figuras geométricas animadas de fondo -->
@@ -34,6 +39,7 @@ import "../styles/global.css";
 </style>
 
 <script>
+  
 // Colores definidos
 const colors: string[] = [
   "#67BC29", // Verde logo
@@ -342,7 +348,7 @@ document.addEventListener('mousemove', (e) => {
   }
   
   // Desactivar repulsión después de 100ms sin movimiento
-  mouseTimeout = setTimeout(() => {
+  mouseTimeout = window.setTimeout(() => {
     isMouseMoving = false;
   }, 100);
 });

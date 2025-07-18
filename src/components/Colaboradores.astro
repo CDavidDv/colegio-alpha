@@ -3,7 +3,7 @@
 ---
 <section id="colaboradores" class=" py-16 ">
   <div class="max-w-7xl mx-auto px-4 relative">
-    <h2 class="text-3xl md:text-4xl font-bold relative text-center text-[#003366] mb-10">Nuestros Colaboradores</h2>
+    <h2 class="text-3xl md:text-4xl font-bold relative text-center text-[var(--steam-azul-oscuro)] mb-10">Nuestros Colaboradores</h2>
     <p class="text-lg text-gray-700 mb-8 text-center">Trabajamos con las mejores instituciones y empresas para brindar educación de calidad.</p>
     
     <div class="relative colaboradores-container">
@@ -57,31 +57,6 @@
             <img src="/logo_monkits.webp" alt="Logo monkits" class="w-full h-full object-contain">
           </div>
         </div>
-        
-        <!-- Tercera serie para asegurar continuidad -->
-        <div class="colaborador-item bg-white">
-          <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center h-32">
-            <img src="/logo-ceuh.webp" alt="Logo ceuh" class="w-full h-full object-contain">
-          </div>
-        </div>
-        
-        <div class="colaborador-item bg-white">
-          <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center h-32">
-            <img src="/logo-citnova.webp" alt="Logo citnova" class="w-full h-full object-contain">
-          </div>
-        </div>
-        
-        <div class="colaborador-item bg-white">
-          <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center h-32">
-            <img src="/logo-sesamo.webp" alt="Logo sesamo" class="w-full h-full object-contain" loading="lazy">
-          </div>
-        </div>
-        
-        <div class="colaborador-item bg-white">
-          <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center h-32">
-            <img src="/logo_monkits.webp" alt="Logo monkits" class="w-full h-full object-contain">
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -91,24 +66,18 @@
   .colaboradores-container {
     overflow: hidden;
     position: relative;
-    padding: 20px 0;
   }
   
   .colaboradores-track {
     display: flex;
-    animation: scroll 25s linear infinite;
-    width: calc(4 * 300px * 3); /* 4 logos * 300px * 3 series */
+    animation: scroll 30s linear infinite;
+    width: calc(200% + 2rem);
   }
   
   .colaborador-item {
     flex-shrink: 0;
-    width: 300px;
-    margin-right: 30px;
-  }
-  
-  /* Pausar animación en hover */
-  .colaboradores-container:hover .colaboradores-track {
-    animation-play-state: paused;
+    width: calc(15% - 1rem);
+    margin: 0 0.5rem;
   }
   
   @keyframes scroll {
@@ -116,57 +85,11 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-4 * 330px)); /* 4 logos * (300px + 30px margin) */
+      transform: translateX(-50%);
     }
   }
   
-  /* Responsive */
-  @media (max-width: 768px) {
-    .colaborador-item {
-      width: 250px;
-    }
-    
-    .colaboradores-track {
-      width: calc(4 * 250px * 3);
-    }
-    
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(calc(-4 * 280px));
-      }
-    }
-  }
-  
-  @media (max-width: 640px) {
-    .colaborador-item {
-      width: 200px;
-    }
-    
-    .colaboradores-track {
-      width: calc(4 * 200px * 3);
-    }
-    
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(calc(-4 * 230px));
-      }
-    }
-  }
-  
-  /* Efectos de hover mejorados */
-  .colaborador-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* Estilos para los contenedores de logos */
-  .colaborador-item > div {
-    border: 1px solid #e5e7eb;
-    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  .colaboradores-container:hover .colaboradores-track {
+    animation-play-state: paused;
   }
 </style> 

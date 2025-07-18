@@ -1,19 +1,40 @@
 @import "tailwindcss";
 
-/* Variables de color del logo */
-:root {
-  --color-logo-verde: #67BC29;
-  --color-logo-azul: #002444;
-  
-  /* Colores STEAM */
-  --color-steam-verde: #97BE12;
-  --color-steam-azul-oscuro: #002444;
-  --color-steam-amarillo: #E4E41A;
-  --color-steam-naranja: #FF7300;
-  --color-steam-azul-claro: #01A8B7;
+body {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
 
-/* Figuras geométricas animadas de fondo */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Variables de color STEAM */
+:root {
+
+  .scroll-smooth {
+    scroll-behavior: smooth !important;
+  }
+
+  --color-logo-verde: #67BC29;
+  --color-logo-azul: #000244;
+  
+  /* Colores STEAM */
+  --steam-verde: #97BE12;
+  --steam-azul-oscuro: #000244;
+  --steam-amarillo: #E4E41A;
+  --steam-naranja: #FF7300;
+  --steam-azul-claro: #01A8B7;
+  
+  /* Colores complementarios simplificados */
+  --color-verde-claro: #67BC29;
+  --color-azul-claro: #000244;
+  --color-gris-claro: #F5F5F5;
+  --color-gris-medio: #E0E0E0;
+}
+
+/* Figuras geométricas animadas de fondo simplificadas */
 .geometric-background {
   position: fixed;
   top: 0;
@@ -27,7 +48,7 @@
 
 .geometric-shape {
   position: absolute;
-  opacity: 0.1;
+  opacity: 0.08;
   filter: blur(1px);
 }
 
@@ -35,7 +56,7 @@
 .circle-1 {
   width: 200px;
   height: 200px;
-  background: var(--color-steam-verde);
+  background: var(--color-logo-verde);
   border-radius: 50%;
   top: 10%;
   left: 5%;
@@ -45,7 +66,7 @@
 .circle-2 {
   width: 150px;
   height: 150px;
-  background: var(--color-steam-azul-claro);
+  background: var(--color-logo-azul);
   border-radius: 50%;
   top: 60%;
   right: 10%;
@@ -58,11 +79,11 @@
   height: 0;
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
-  border-bottom: 173px solid var(--color-steam-naranja);
+  border-bottom: 173px solid var(--color-verde-claro);
   top: 20%;
   right: 20%;
   animation: rotate 25s linear infinite, pulse 4s ease-in-out infinite;
-  filter: drop-shadow(0 10px 20px rgba(255, 115, 0, 0.3));
+  filter: drop-shadow(0 10px 20px rgba(139, 195, 74, 0.3));
 }
 
 .triangle-2 {
@@ -70,11 +91,11 @@
   height: 0;
   border-left: 80px solid transparent;
   border-right: 80px solid transparent;
-  border-bottom: 138px solid var(--color-steam-amarillo);
+  border-bottom: 138px solid var(--color-azul-claro);
   bottom: 20%;
   left: 15%;
   animation: rotate 18s linear infinite reverse, pulse 5s ease-in-out infinite;
-  filter: drop-shadow(0 8px 16px rgba(228, 228, 26, 0.3));
+  filter: drop-shadow(0 8px 16px rgba(33, 150, 243, 0.3));
 }
 
 /* Cuadrado con sombra 3D */
@@ -92,11 +113,11 @@
 .square-2 {
   width: 80px;
   height: 80px;
-  background: var(--color-steam-azul-oscuro);
+  background: var(--color-logo-azul);
   bottom: 30%;
   right: 25%;
   animation: rotate 22s linear infinite reverse, float 9s ease-in-out infinite;
-  filter: drop-shadow(0 6px 12px rgba(0, 36, 68, 0.4));
+  filter: drop-shadow(0 6px 12px rgba(0, 60, 126, 0.4));
   transform: rotate(30deg);
 }
 
@@ -104,12 +125,12 @@
 .hexagon-1 {
   width: 100px;
   height: 57.74px;
-  background: var(--color-steam-azul-claro);
+  background: var(--color-azul-claro);
   position: relative;
   top: 15%;
   left: 80%;
   animation: rotate 28s linear infinite, pulse 6s ease-in-out infinite;
-  filter: drop-shadow(0 10px 20px rgba(1, 168, 183, 0.3));
+  filter: drop-shadow(0 10px 20px rgba(33, 150, 243, 0.3));
 }
 
 .hexagon-1::before,
@@ -123,12 +144,12 @@
 
 .hexagon-1::before {
   bottom: 100%;
-  border-bottom: 28.87px solid var(--color-steam-azul-claro);
+  border-bottom: 28.87px solid var(--color-azul-claro);
 }
 
 .hexagon-1::after {
   top: 100%;
-  border-top: 28.87px solid var(--color-steam-azul-claro);
+  border-top: 28.87px solid var(--color-azul-claro);
 }
 
 /* Animaciones */
@@ -152,11 +173,11 @@
 
 @keyframes pulse {
   0%, 100% {
-    opacity: 0.1;
+    opacity: 0.08;
     transform: scale(1);
   }
   50% {
-    opacity: 0.2;
+    opacity: 0.15;
     transform: scale(1.1);
   }
 }
@@ -168,10 +189,10 @@
 
 @keyframes blink {
   0%, 100% {
-    opacity: 0.1;
+    opacity: 0.08;
   }
   50% {
-    opacity: 0.3;
+    opacity: 0.2;
   }
 }
 

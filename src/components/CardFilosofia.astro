@@ -11,29 +11,29 @@ export interface Props {
   franjaColor1?: string;
   franjaColor2?: string;
 }
-const { img, emoji, titulo, texto, colorBorde, colorTitulo, svgPath, alt, franjaColor1 = '#67BC29', franjaColor2 = '#01A8B7' } = Astro.props;
+const { img, emoji, titulo, texto, colorBorde, colorTitulo, svgPath, alt, franjaColor1 = '#67BC29', franjaColor2 = '#003c7e' } = Astro.props;
 ---
-<div class="group bg-[#f1f5ff] hover:border-2 z-10 rounded-2xl  shadow-md border-2 border-transparent hover:shadow-2xl transition-all duration-200 cursor-pointer filo-card-move overflow-hidden flex flex-col items-center" style={`--border-color: ${colorBorde}`}>
+<div class="group bg-[var(--color-logo-azul)] hover:border-2 z-10 rounded-2xl  shadow-md border-2 border-transparent hover:shadow-2xl transition-all duration-200 cursor-pointer filo-card-move overflow-hidden flex flex-col items-center" style={`--border-color: ${colorBorde}`}>
   <div class="relative w-full">
     <img src={img} alt={alt || titulo} class="object-cover w-full h-38 rounded-t-2xl lazyload" />
     
     <svg class="absolute bottom-0 left-0 w-full h-16" viewBox="0 0 400 20" xmlns="http://www.w3.org/2000/svg" style="z-index:2">
       <!-- Triángulo central (azul) -->
-      <polygon points="40,40 150,90 320,40" fill="#01A8B7" fill-opacity="0.9" />
+      <polygon points="40,40 150,90 320,40" fill="#003c7e" fill-opacity="0.9" />
       <!-- Triángulo derecho (verde) -->
-      <polygon points="400,5 400,90 150,90" fill="#FF7300" fill-opacity="0.9" />
-      <!-- Triángulo izquierdo (blanco o color de fondo) -->
-      <polygon points="0,0 0,90 350,90" fill="#97BE12" />
+      <polygon points="400,5 400,90 150,90" fill="#67BC29" fill-opacity="0.9" />
+      <!-- Triángulo izquierdo (verde claro) -->
+      <polygon points="0,0 0,90 350,90" fill="#8BC34A" />
       
     
     </svg>
       
     
   </div>
-  <div class="h-3/12 w-full bg-[#E4E41A]">
-    <div class="flex bg-[#f1f5ff] flex-col items-center px-4 pb-6 pt-2 clip-diagonal">
-      <h3 class={`text-xl font-bold mb-2 text-center`} style={`color: ${colorTitulo.replace('text-[', '').replace(']', '')}`}>{titulo}</h3>
-      <p class="text-gray-700 text-center">{texto}</p>
+  <div class="h-3/12 w-full bg-[var(--color-verde-claro)]">
+    <div class="flex bg-[var(--color-logo-azul)] flex-col items-center px-4 pb-6 pt-2 clip-diagonal">
+      <h3 class={`text-xl w-10/12 font-bold mb-2 text-center`} style={`color: ${colorTitulo.replace('text-[', '').replace(']', '')}`}>{titulo}</h3>
+      <p class="text-white text-center">{texto}</p>
     </div>
   </div>
   <style>

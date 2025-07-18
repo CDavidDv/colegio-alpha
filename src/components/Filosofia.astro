@@ -4,39 +4,10 @@ import CardFilosofia from "./CardFilosofia.astro";
 ---
 <section id="filosofia" class="py-16">
   <div class="max-w-6xl mx-auto px-4 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-logo-azul)] mb-6">¿Por qué elegirnos?</h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-[var(--steam-azul-oscuro)] mb-6">¿Por qué elegirnos?</h2>
     <p class="text-lg text-gray-700 mb-8">En Colegio Alpha entendemos que la educación de tus hijos es la inversión más importante. Por eso, nos comprometemos a ofrecer un ambiente seguro, cálido y estimulante donde cada niño pueda desarrollar su potencial único.</p>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-      <CardFilosofia
-        img="/alpha- (6).webp"
-        emoji="🛡️"
-        titulo="Seguridad Garantizada"
-        texto="Instalaciones seguras, personal capacitado y protocolos de seguridad que te dan tranquilidad."
-        colorBorde="#F97316"
-        colorTitulo="#F97316"
-        svgPath="M0 20 Q200 80 400 20 V60 H0Z"
-        alt="Seguridad"
-      />
-      <CardFilosofia
-        img="/atencion.webp"
-        emoji="👨‍👩‍👧‍👦"
-        titulo="Atención Personalizada"
-        texto="Grupos reducidos y seguimiento individual del progreso de cada estudiante."
-        colorBorde="#67BC29"
-        colorTitulo="#67BC29"
-        svgPath="M0 30 Q200 90 400 30 V60 H0Z"
-        alt="Atención"
-      />
-      <CardFilosofia
-        img="/6.webp"
-        emoji="🌟"
-        titulo="Valores"
-        texto="Fomentamos el respeto, la honestidad y la responsabilidad en cada estudiante."
-        colorBorde="#3B82F6"
-        colorTitulo="#1E40AF"
-        svgPath="M0 40 Q200 70 400 40 V60 H0Z"
-        alt="Valores"
-      />
+      
       <CardFilosofia
         img="/deportes.webp"
         emoji="⚽"
@@ -49,60 +20,37 @@ import CardFilosofia from "./CardFilosofia.astro";
       />
       <CardFilosofia
         img="/alpha- (9).webp"
-        emoji="🏕️"
-        titulo="Campamentos"
-        texto="Desarrollan autonomía, liderazgo y habilidades sociales en un entorno divertido y seguro."
-        colorBorde="#3B82F6"
-        colorTitulo="#3B82F6"
-        svgPath="M0 40 Q200 70 400 40 V60 H0Z"
-        alt="Campamentos"
-      />
-      <CardFilosofia
-        img="/alpha- (10).webp"
         emoji="🎉"
-        titulo="Eventos"
-        texto="Promueven la convivencia, la creatividad y la expresión de talentos en la comunidad escolar."
-        colorBorde="#F97316"
-        colorTitulo="#F97316"
-        svgPath="M0 25 Q200 100 400 25 V60 H0Z"
-        alt="Eventos"
-      />
-      <CardFilosofia
-        img="/eeuu_flag.webp"
-        emoji="🇬🇧"
-        titulo="Inglés"
-        texto="Facilita la comunicación global y abre puertas a nuevas oportunidades académicas y culturales."
-        colorBorde="#1E40AF"
-        colorTitulo="#1E40AF"
+        titulo="Eventos y Campamentos" 
+        texto="Desarrollamos habilidades sociales, liderazgo y creatividad a través de experiencias divertidas y seguras."
+        colorBorde="#FF7300"
+        colorTitulo="#FF7300"
         svgPath="M0 40 Q200 70 400 40 V60 H0Z"
-        alt="Inglés"
+        alt="Eventos y Campamentos"
       />
       <CardFilosofia
-        img="/francia_flag.jpg"
-        emoji="🇫🇷"
-        titulo="Francés"
-        texto="Enriquece el aprendizaje de idiomas y la apreciación de otras culturas desde pequeños."
-        colorBorde="#01A8B7"
-        colorTitulo="#01A8B7"
-        svgPath="M0 25 Q200 100 400 25 V60 H0Z"
-        alt="Francés"
+        img="/eeuu_flag.webp" 
+        emoji="🌎"
+        titulo="Inglés y Francés"
+        texto="Facilitamos la comunicación global y enriquecemos el aprendizaje cultural a través del inglés y francés, abriendo puertas a nuevas oportunidades."
+        colorBorde="#E4E41A"
+        colorTitulo="#E4E41A"
+        svgPath="M0 40 Q200 70 400 40 V60 H0Z"
+        alt="Idiomas"
       />
       <CardFilosofia
         img="/artes.webp"
         emoji="🎨"
-        titulo="Artes"
-        texto="Desarrollan la creatividad, la sensibilidad y la expresión artística en los niños."
-        colorBorde="#EAB308"
-        colorTitulo="#EAB308"
+        titulo="Artes y Cultura"
+        texto="Desarrollamos la creatividad, expresión artística y apreciación cultural en nuestros estudiantes."
+        colorBorde="#2196F3"
+        colorTitulo="#2196F3"
         svgPath="M0 40 Q200 70 400 40 V60 H0Z"
-        alt="Artes"
+        alt="Artes y Cultura"
       />
     </div>
-
-
-    
   </div>
-</section> 
+</section>
 
 <script>
 // Efecto de seguimiento al mouse en las cards
